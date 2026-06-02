@@ -41,12 +41,19 @@ A Java console-based Student Management System built using:
 StudentManagement
 
 ├── src
+
 │   ├── database
+
 │   ├── dao
+
 │   ├── model
+
 │   ├── service
+
 │   └── Main.java
+
 ├── lib
+
 └── README.md
 
 ## Database
@@ -69,6 +76,27 @@ name VARCHAR(100),
 marks DOUBLE
 
 );
+```
+
+## Database Configuration
+
+Before running the project, configure your MySQL credentials in:
+
+```plaintext
+src/database/DatabaseConnection.java
+```
+
+Update the following values with your own database details:
+
+```java
+private static final String URL =
+        "jdbc:mysql://localhost:3306/student_db";
+
+private static final String USER =
+        "root";
+
+private static final String PASSWORD =
+        "YOUR_MYSQL_PASSWORD";
 ```
 
 ## How To Run
